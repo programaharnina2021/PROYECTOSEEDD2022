@@ -1,5 +1,7 @@
 package futbol;
 
+import java.util.Random;
+
 public class Competicion {
 	private Equipo[] equipos;
 	private Emparejamiento[] emparejamientos;
@@ -8,6 +10,22 @@ public class Competicion {
 		super();
 		this.equipos = equipos;
 		emparejamientos = emparejamientoEquipos();
+		disputarEnfrentamientos();
+	}
+
+	/**
+	 * recorre los enfrentamientos ya creados y aletoriamente le da un valor a los goles de cada equipo 
+	 */
+	public void disputarEnfrentamientos() {
+		for (int i = 0; i < emparejamientos.length; i++) {
+			emparejamientos[i].setResultado(generarNumeroAleatorio(),generarNumeroAleatorio());
+		}
+	}
+	
+	private int generarNumeroAleatorio() {
+		int max=10;
+		return 0;
+//		return new Random().nextInt(max);
 	}
 
 	public Emparejamiento[] emparejamientoEquipos() {
