@@ -1,4 +1,4 @@
-package withObjetcs;
+package withNonStaticMethids;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,8 +10,8 @@ class MethodPrivateThrougPublic05Test {
 	void testAddOdds() {
 		int valueOne=1,valueTwo=1;
 		int expected=2;
-		// probando el método private indirectamente 
 		MethodPrivateThrougPublic05 methodPrivateThrougPublic05=new MethodPrivateThrougPublic05();
+		// probando el método private indirectamente 
 		assertEquals(expected, methodPrivateThrougPublic05.addOdds(valueOne, valueTwo));
 		valueOne=2;
 		expected=-1;

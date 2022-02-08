@@ -2,17 +2,35 @@ package cafetera;
 
 public class Cafetera implements Cafeteable {
 	private short capacidadMaxima, cantidadActual;
-	
+
+	public Cafetera(short capacidadMaxima) {
+		super();
+		this.capacidadMaxima = capacidadMaxima;
+		this.cantidadActual = 0;
+	}
+
+	public short getCapacidadMaxima() {
+		return capacidadMaxima;
+	}
+
+	public short getCantidadActual() {
+		return cantidadActual;
+	}
+
 	@Override
 	public void llenarCafetera() {
-		// TODO Auto-generated method stub
-
+		this.cantidadActual = this.capacidadMaxima;
 	}
 
 	@Override
 	public int servirTaza(int capacidad) {
-		// TODO Auto-generated method stub
-		return 0;
+		if (cantidadActual >= capacidad) {
+			cantidadActual -= capacidad;
+			return capacidad;
+		}
+		int servir = cantidadActual;
+		cantidadActual = 0;
+		return servir;
 	}
 
 	@Override
