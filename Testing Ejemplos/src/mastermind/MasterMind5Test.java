@@ -20,6 +20,8 @@ class MasterMind5Test {
 		//primera prueba longitud correcta
 		assertEquals(expected, masterMind5.getEnigma().size());
 		for (int i = 0; i < expected; i++) {
+			//Este metodo para asegurar si un color de la combinacion enigma
+			//sirve para cualquier otra combinacion
 			boolean containsTeo = Arrays
 					.asList(ColorCombinacion.values())
 					.contains(masterMind5.getEnigma().getAt(i));
