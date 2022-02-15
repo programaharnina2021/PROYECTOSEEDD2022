@@ -39,15 +39,40 @@ class CafeteraTest {
 		short taza=160;
 		int tazaUno=cafetera.servirTaza(taza);
 		assertEquals(cafetera.getCapacidadMaxima(), tazaUno);
+	
 	}
 	@Test
 	void testVaciarCafetera() {
-		fail("Not yet implemented");
+		//Condiciones iniciales
+		short capacidadMaxima=100;
+		//SUT Subject Under Test
+		Cafetera cafetera=new Cafetera(capacidadMaxima);
+		cafetera.llenarCafetera();
+		cafetera.vaciarCafetera();
+		assertEquals(0, cafetera.getCantidadActual());
 	}
 
 	@Test
 	void testAgregarCafe() {
-		fail("Not yet implemented");
+		short capacidadMaxima=100;
+		Cafetera cafetera=new Cafetera(capacidadMaxima);
+		//primer caso
+		int relleno=110;
+		cafetera.agregarCafe(relleno);
+		assertEquals(capacidadMaxima, cafetera.getCantidadActual());
+		//segundo caso (cantidad actual+relleno>capacidadMAxima)
+		relleno=60;
+		cafetera.agregarCafe(relleno);
+		assertEquals(capacidadMaxima, cafetera.getCantidadActual());
+		//tercer caso
+		relleno=30;
+		cafetera=new Cafetera(capacidadMaxima);
+		cafetera.agregarCafe(relleno);
+		assertEquals(relleno, cafetera.getCantidadActual());
+		cafetera.agregarCafe(relleno);
+		relleno+=relleno;
+		assertEquals(relleno, cafetera.getCantidadActual());
+		
 	}
 
 }

@@ -35,14 +35,17 @@ public class Cafetera implements Cafeteable {
 
 	@Override
 	public void vaciarCafetera() {
-		// TODO Auto-generated method stub
-
+		this.cantidadActual = 0;
 	}
 
 	@Override
-	public void agregarCafe(int capacidad) {
-		// TODO Auto-generated method stub
-
+	public void agregarCafe(int cantidad) {
+		int cantidadTotal = this.cantidadActual + cantidad;
+		if (cantidadTotal > capacidadMaxima) {
+			this.cantidadActual = this.capacidadMaxima;
+		}else {
+			this.cantidadActual=(short) cantidadTotal;
+		}
 	}
 
 }
