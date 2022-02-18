@@ -1,5 +1,5 @@
 package mastermind.dominio;
 
 public enum ColorResultado {
-	blanco,negro;
+	blanco,negro,vacio;
 }

@@ -2,7 +2,8 @@ package ahorcado;
 
 import java.util.Scanner;
 
-public class Ahorcado {
+public class AhorcadoV0
+{
 	public static void main(String[] args) {
 		//Leer la palabra secreta
 		Scanner leer = new Scanner(System.in);

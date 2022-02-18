@@ -52,6 +52,9 @@ public class MasterMind5 {
 	
 	/**
 	 * Comprueba si la ficha que has metido esta en el vector enigma
+	 * Puede haber repeticiones en el enigma
+	 * por lo tanto lo que hago es comprobar que colores de la combinacion
+	 * aparecen en el enigma. 
 	 * @param combinacion es el vector que el jugador ha metido y quiere comprobar
 	 * @return el vector resultante que pone 6 si el numero esta en el vector enigma
 	 */
@@ -71,6 +74,11 @@ public class MasterMind5 {
 	}
 
 	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setEnigma(Combinacion secreta) {
 		// TODO Auto-generated method stub
 		
 	}
