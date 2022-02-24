@@ -7,6 +7,7 @@ public class Palabra {
 	public Palabra(String palabraSecreta) {
 		super();
 		this.palabraSecreta = palabraSecreta;
+		this.generaCadenaAciertos();
 	}
 
 	private void generaCadenaAciertos() {
