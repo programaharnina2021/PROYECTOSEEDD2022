@@ -1,5 +1,6 @@
+package v0;
 
-public class Pescador {
+public class Alfarero {
 	String nombre;
 	int esperanzaVida;
 	int edad=0;

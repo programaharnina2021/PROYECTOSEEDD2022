@@ -1,5 +1,6 @@
+package v0;
 
-public class Policia {
+public class Pescador {
 	String nombre;
 	int esperanzaVida;
 	int edad=0;
@@ -12,7 +13,7 @@ public class Policia {
 		return edad<esperanzaVida;
 	}
 	
-	public void realizaActividadTerciaria(int ambito) {
-		System.out.println("realizando actividad de ambito "+ambito);
+	public void realizarActividadPrimaria() {
+		System.out.println("afarea");
 	}
 }

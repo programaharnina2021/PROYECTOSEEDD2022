@@ -1,5 +1,6 @@
+package v0;
 
-public class Alfarero {
+public class Policia {
 	String nombre;
 	int esperanzaVida;
 	int edad=0;
@@ -12,7 +13,7 @@ public class Alfarero {
 		return edad<esperanzaVida;
 	}
 	
-	public void realizarActividadPrimaria() {
-		System.out.println("afarea");
+	public void realizaActividadTerciaria(int ambito) {
+		System.out.println("realizando actividad de ambito "+ambito);
 	}
 }

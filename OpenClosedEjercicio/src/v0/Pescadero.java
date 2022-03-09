@@ -1,3 +1,4 @@
+package v0;
 
 public class Pescadero {
 	String nombre;
