@@ -19,8 +19,12 @@ class MethodWithReturn02Test {
 		//pruebas sobre un objeto anonimo
 		assertTrue(new MethodWithReturn02().giveMe());	
 		//muchos objetos anonimos
+		Coordinate leftUp = new Coordinate(0, 0);
+		Coordinate rigthDown = new Coordinate(1, 1);
 		Rectangulo miRectangulo=new MethodWithReturn02()
 				.creadorRectangulos(new Coordinate(0, 0), new Coordinate(1, 1));
+		assertEquals(miRectangulo.leftUp,leftUp);
+		assertEquals(miRectangulo.rightDown, rigthDown);
 	}
 
 	

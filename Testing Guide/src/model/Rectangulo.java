@@ -1,7 +1,7 @@
 package model;
 
 public class Rectangulo {
-	private Coordinate leftUp,rightDown;
+	public Coordinate leftUp,rightDown;
 
 	public Rectangulo(Coordinate leftUp, Coordinate rightDown) {
 		super();
